@@ -27,7 +27,7 @@ async function UpdateSliderHandler(req, res) {
 
       // Update the slider image path with the new file path
       // slider.image = `/uploads/${req.file.filename}`;
-      slider.image = `${domain}/uploads/${req.file.filename}`;
+      slider.image = `https://beauty-bee-server.onrender.com/uploads/${req.file.filename}`;
       console.log("New Image Path:", slider.image);
 
       // Delete the old image file

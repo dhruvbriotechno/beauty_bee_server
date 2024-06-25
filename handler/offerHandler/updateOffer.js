@@ -29,7 +29,7 @@ async function UpdateOfferHandler(req, res) {
 
       // Update the offer image path with the new file path
       // offer.image = `/uploads/${req.file.filename}`;
-      offer.image = `${domain}/uploads/${req.file.filename}`;
+      offer.image = `https://beauty-bee-server.onrender.com/uploads/${req.file.filename}`;
       console.log("New Image Path:", offer.image);
 
       // Delete the old image file
