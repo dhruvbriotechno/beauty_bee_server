@@ -1,6 +1,7 @@
 
 const Offer = require("../../models/offer");
 
+const domain = process.env.DOMAIN;
 async function AddOfferHandler(req, res) {
   try {
     const {
@@ -9,7 +10,9 @@ async function AddOfferHandler(req, res) {
       percentage
     } = req.body;
 
-    const image = req.file ? `http://localhost:5000/uploads/${req.file.filename}` : null;
+    // console.log("domain______________>",domain)
+
+    const image = req.file ? `${domain}/uploads/${req.file.filename}` : null;
 
     // Check if Offer with provided title already exists
     const existingOffer = await Offer.findOne({ title });
