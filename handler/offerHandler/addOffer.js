@@ -9,7 +9,7 @@ async function AddOfferHandler(req, res) {
       percentage
     } = req.body;
 
-    console.log("domain______________>",process.env.DOMAIN)
+    // console.log("domain______________>",process.env.DOMAIN)
 
     const image = req.file ? `https://beauty-bee-server.onrender.com/uploads/${req.file.filename}` : null;
 

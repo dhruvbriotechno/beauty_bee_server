@@ -4,7 +4,7 @@ const Slider = require("../../models/slider");
 async function AddSliderHandler(req, res) {
   try {
     const { title } = req.body;
-    const image = req.file ? `${domain}uploads/${req.file.filename}` : null;
+    const image = req.file ? `https://beauty-bee-server.onrender.com/uploads/${req.file.filename}` : null;
     // Check if Slider with provided title already exists
     const existingSlider = await Slider.findOne({ title });
     if (existingSlider) {
